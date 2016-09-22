@@ -150,6 +150,17 @@ def expose_variant(v):
         "read_pos_rank_sum": v.read_pos_rank_sum,
         "strand_bias_odds_ratio": v.strand_bias_odds_ratio,
         "type": v.type,
+        "fathmm_score":v.fathmm_score,
+        "fathmm_pred":v.fathmm_pred,
+        "fathmm_rankscore":v.fathmm_rankscore,
+        "metasvm_score":v.metasvm_score,
+        "metasvm_pred":v.metasvm_pred,
+        "metasvm_rankscore":v.metasvm_rankscore,
+        "metalr_score":v.metalr_score,
+        "metalr_pred":v.metalr_pred,
+        "metalr_rankscore":v.metalr_rankscore,
+        "provean_score":v.provean_score,
+        "provean_pred":v.provean_pred,
     }
 
 def add_genotypes_selection(v_exposed, samples_selection):
