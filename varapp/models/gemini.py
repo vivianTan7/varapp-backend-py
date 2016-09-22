@@ -149,6 +149,7 @@ class Variants(models.Model):
     #info = models.BinaryField(blank=True, null=True)
     type = models.TextField(blank=True)
     #sub_type = models.TextField(blank=True)
+    
 
 ### Manually added ###
 
@@ -166,6 +167,21 @@ class Variants(models.Model):
 
     hgvsp = models.TextField(blank=True, db_column='vep_hgvsp')
     hgvsc = models.TextField(blank=True, db_column='vep_hgvsc')
+    
+    fathmm_score = models.TextField(blank=True, db_column='vep_fathmm_score')
+    fathmm_pred = models.TextField(blank=True, db_column='vep_fathmm_pred')
+    fathmm_rankscore = models.TextField(blank=True, db_column='vep_fathmm_rankscore')
+    
+    metasvm_score = models.TextField(blank=True, db_column='vep_metasvm_score')
+    metasvm_pred = models.TextField(blank=True, db_column='vep_metasvm_pred')
+    metasvm_rankscore = models.TextField(blank=True, db_column='vep_metasvm_rankscore')
+    
+    metalr_score = models.TextField(blank=True, db_column='vep_metalr_score')
+    metalr_pred = models.TextField(blank=True, db_column='vep_metalr_pred')
+    metalr_rankscore = models.TextField(blank=True, db_column='vep_metalr_rankscore')
+    
+    provean_score = models.TextField(blank=True, db_column='vep_provean_score')
+    provean_pred = models.TextField(blank=True, db_column='vep_provean_pred')
 
     def __str__(self):
         return "<Variant {}:{}>".format(self.chrom, self.start)
